@@ -1,0 +1,15 @@
+{% extends "pattern.html" %}
+{% block content %}
+<h3>Список сериалов</h3>
+<div class="serials-list">
+    {% for serial in serials %}
+        <div class="serial">
+            <img src="{{ serial.image }}" alt="{{ serial.name }}">
+            <div class="serial-info">
+                <h2>{{ serial.name }}</h2>
+                <p>{{ serial.description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
